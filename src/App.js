@@ -1,37 +1,25 @@
-import React, { useState } from 'react';
-import { BrowserRouter, matchRoutes, Route, Routes, useParams,  } from 'react-router-dom';
+import React from 'react';
 
 import './App.css';
 
-import { useCitiesList } from './hooks/useCitiesList';
-
 import { Input } from './Input';
 import { ErrorBoundary } from './ErrorBoundary';
-import { SingleCity } from './SingleCity';
 import { CardList } from './CardList';
-import { CardNoMemo } from './Card';
-
+import { useCitiesList } from './hooks/useCitiesList';
 
 export const GlobalContext = React.createContext();
 
 function App() {
   const [state, dispatch] = useCitiesList();
   return (
-    <BrowserRouter>
-      <GlobalContext.Provider value={{ state, dispatch }}>
-        <Routes>
-          <Route path='/home' element={
-            <div className="Main">
-              <Input />
-              <ErrorBoundary>
-                <CardList />
-              </ErrorBoundary>
-            </div >
-          } />
-           { <Route path="/city/:city" element={<SingleCity />} /> }
-        </Routes>
-      </GlobalContext.Provider>
-    </BrowserRouter>
+    <GlobalContext.Provider value={{ state, dispatch }}>
+      <div className="Main">
+        <Input />
+        <ErrorBoundary>
+          <CardList  />
+        </ErrorBoundary>
+      </div >
+    </GlobalContext.Provider>
   );
 }
 
