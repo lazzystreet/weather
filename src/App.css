@@ -31,6 +31,7 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: rgb(145, 122, 248);
+    font-size: 18px;
     border: none;
     outline: 0;
 }
@@ -64,6 +65,8 @@
     color: azure;
     margin-left: 24px;
     box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 75);
+    text-decoration: none;
+    display: block;
 }
 
 .Card:first-child{
@@ -86,7 +89,10 @@
 .MainInfo{
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: azure;
     align-items: center;
+   
 }
 
 .Title{
