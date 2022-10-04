@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, matchRoutes, Route, Routes, useParams,  } from 'react-router-dom';
+import { BrowserRouter, matchRoutes, Navigate, Route, Routes, useParams,  } from 'react-router-dom';
 
 import './App.css';
 
@@ -20,6 +20,7 @@ function App() {
     <BrowserRouter>
       <GlobalContext.Provider value={{ state, dispatch }}>
         <Routes>
+          {/* <Route path='/*' element={<Navigate to path='/home' replace/>}/> */}
           <Route path='/home' element={
             <div className="Main">
               <Input />
