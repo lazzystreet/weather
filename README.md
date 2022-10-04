@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+You can take a look at the prototype here: https://weather-six-chi.vercel.app/home
+
 ## Available Scripts
 
 In the project directory, you can run:
