@@ -111,9 +111,10 @@
     font-weight: 500;
 }
 
-.Temperature:after{
+.TemperatureIcon:after{
     content: '°';
 }
+
 
 .Information{
     margin-top: 12px;
@@ -140,6 +141,7 @@
     display: flex;
     margin-top: 24px;
     overflow-x: scroll;
+    align-items: center;
     width: 95%;
     padding: 24px;
     /* background-color: rgb(145, 122, 248); */
@@ -150,10 +152,25 @@
     margin-left: 24px;
     border-radius: 10px;
     box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 75);
+    color:azure;
+    text-align: center;
+    padding: 10px;
 }
 
 .ListCard:first-child{
     margin-left: 0;
+}
+
+.ListTemp{
+
+}
+
+.TemperatureIcon:after{
+    content: '°';
+}
+
+.ListMain{
+
 }
 
 /* SingleCity finish */

@@ -37,7 +37,7 @@ export const CardNoMemo = ({ city, setCityCoord }) => {
         })
         navigate('/home')
     };
-    console.log('inHome', inHome);
+
     if (inHome) {
         return(
         <Link to={`/city/${city.toLowerCase()}`} className="Card">
@@ -49,7 +49,7 @@ export const CardNoMemo = ({ city, setCityCoord }) => {
                 <img className='Icon' src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt='icon' />
                 <div className='Title'>{name}</div>
                 <div className='Description'>{description}</div>
-                <div className='Temperature'>{temp.toFixed()}</div>
+                <div className='Temperature TemperatureIcon'>{temp.toFixed()}</div>
             </div>
             <div className='Information'>
                 <div>Humidity: {humidity}</div>
@@ -69,7 +69,7 @@ export const CardNoMemo = ({ city, setCityCoord }) => {
                 <img className='Icon' src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt='icon' />
                 <div className='Title'>{name}</div>
                 <div className='Description'>{description}</div>
-                <div className='Temperature'>{temp.toFixed()}</div>
+                <div className='Temperature TemperatureIcon'>{temp.toFixed()}</div>
             </div>
             <div className='Information'>
                 <div>Humidity: {humidity}</div>

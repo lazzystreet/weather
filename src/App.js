@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter, matchRoutes, Navigate, Route, Routes, useParams,  } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Route, Routes,  } from 'react-router-dom';
 
 import './App.css';
 
@@ -9,7 +9,6 @@ import { Input } from './Input';
 import { ErrorBoundary } from './ErrorBoundary';
 import { SingleCity } from './SingleCity';
 import { CardList } from './CardList';
-import { CardNoMemo } from './Card';
 
 
 export const GlobalContext = React.createContext();
