@@ -7,12 +7,11 @@ import '../App.js';
 import { useParams } from 'react-router';
 import { ListCard } from '../ListCard';
 
-export const SingleCity = (props) => {
+export const SingleCity = () => {
     const [cityCoord, setCityCoord] = useState(null);
     const data = useForecast(cityCoord)
-
-    let { city } = useParams();
-
+    const { city } = useParams();
+    console.log('data',data)
     return (
         <div className='SingleCityWrap'>
             <Card city={city} setCityCoord={setCityCoord} />
@@ -24,3 +23,4 @@ export const SingleCity = (props) => {
         </div>
     )
 };
+

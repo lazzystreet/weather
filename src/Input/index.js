@@ -5,7 +5,7 @@ import { GlobalContext } from '../App.js';
 
 export const Input = () => {
     const inputRef = useRef(null);
-    const { dispatch, state: { inputValue,editingCity } } = useContext(GlobalContext);
+    const { dispatch, state: { inputValue, editingCity } } = useContext(GlobalContext);
 
     const handleOnAdd = () =>{
         if (inputValue.length){
@@ -42,7 +42,6 @@ export const Input = () => {
         })
         
     }
-
    
     return (
         <div className="InputWrap">

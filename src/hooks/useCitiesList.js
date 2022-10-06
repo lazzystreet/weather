@@ -44,6 +44,8 @@ const reducer = (state, action) => {
 }
 export const useCitiesList = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
+    console.log(state);
+
     const { citiesList } = state;
     useEffect(() => {
         localStorage.setItem('citiesList', JSON.stringify(citiesList));

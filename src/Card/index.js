@@ -1,4 +1,4 @@
-import React, { memo, useContext, useEffect } from 'react';
+import React, { memo, useContext, useEffect, useState } from 'react';
 import { Link, useNavigate, useMatch } from 'react-router-dom';
 
 import '../App.js';
@@ -28,19 +28,21 @@ export const CardNoMemo = ({ city, setCityCoord }) => {
             type: 'DELETE_CITY',
             payload: city,
         })
+        navigate('/home');
     }
 
     const handleOnEdit = () => {
         dispatch({
             type: 'EDIT_CITY',
             payload: city,
-        })
-        navigate('/home')
+        });
+        navigate('/home');
     };
 
+    
     if (inHome) {
         return(
-        <Link to={`/city/${city.toLowerCase()}`} className="Card">
+        <Link to={`/city/${city}`} className="Card">
             <div className="ActionButtonWrap">
                 <button className='ActionButton' onClick={handleOnEdit}>Edit</button>
                 <button className='ActionButton' onClick={handleOnDelete}>X</button>

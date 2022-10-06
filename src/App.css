@@ -161,16 +161,9 @@
     margin-left: 0;
 }
 
-.ListTemp{
-
-}
-
 .TemperatureIcon:after{
     content: '°';
 }
 
-.ListMain{
-
-}
 
 /* SingleCity finish */

@@ -28,7 +28,7 @@ function App() {
               </ErrorBoundary>
             </div >
           } />
-           { <Route path="/city/:city" element={<SingleCity />} /> }
+           { <Route path="/city/:city" element={<SingleCity />} props={state}/> }
         </Routes>
       </GlobalContext.Provider>
     </BrowserRouter>
